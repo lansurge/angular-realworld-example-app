@@ -1,5 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ClarityModule } from '@clr/angular';
 
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
@@ -16,6 +17,7 @@ import { CoreModule } from './core/core.module';
   declarations: [AppComponent, FooterComponent, HeaderComponent],
   imports: [
     BrowserModule,
+    ClarityModule,
     CoreModule,
     SharedModule,
     HomeModule,

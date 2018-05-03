@@ -50,6 +50,8 @@ import 'core-js/es7/reflect';
  **/
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 
+import 'technicalindicators/dist/index.js';  // Run 'npm install --save technicalindicators'
+
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */

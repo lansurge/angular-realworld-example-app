@@ -22,6 +22,11 @@ export class HomeComponent implements OnInit {
   };
   tags: Array<string> = [];
   tagsLoaded = false;
+  users: Array<any> = [
+    {id: 1, name: 'dusty', creation: new Date(), color: 'green'},
+    {id: 1, name: 'dusty', creation: new Date(), color: 'green'},
+    {id: 1, name: 'dusty', creation: new Date(), color: 'green'}
+  ];
 
   ngOnInit() {
     this.userService.isAuthenticated.subscribe(

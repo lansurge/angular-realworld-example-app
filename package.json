@@ -23,9 +23,15 @@
     "@angular/platform-browser": "5.2.9",
     "@angular/platform-browser-dynamic": "5.2.9",
     "@angular/router": "5.2.9",
+    "@clr/angular": "^0.11.15",
+    "@clr/icons": "^0.11.15",
+    "@clr/ui": "^0.11.15",
+    "@webcomponents/custom-elements": "^1.0.0",
     "core-js": "^2.4.1",
+    "lodash": "^4.17.10",
     "marked": "^0.3.9",
     "rxjs": "^5.5.8",
+    "technicalindicators": "^1.1.10",
     "zone.js": "^0.8.25"
   },
   "devDependencies": {
