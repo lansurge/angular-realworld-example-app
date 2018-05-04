@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 import { ApiService } from './api.service';
 import { WebsocketService } from './websocket.service';
+import * as _ from 'lodash';
 
 const WATCHING_SYMBOLS = ['BTCUSDT', 'EOSBTC', 'BNBBTC', 'XRPBTC', 'LTCBTC'];
 const INTERVALS = ['1d', '30m', '1h', '4h'];
@@ -23,14 +22,18 @@ export class TaService {
     return _.map(WATCHING_SYMBOLS, (s) => {
       return {
         name: s,
-        series: this.initSeriesData({ s: s, c: 0, E: moment().format('x') })
+        series: this.initSeriesData({
+          s: s,
+          c: 0,
+          // E: moment().format('x')
+        })
       };
     });
   }
 
   initSeriesData(s) {
-    const time = moment(s.E);
-    const timeVal = time.format('HHmmss');
+    // const time = moment(s.E);
+    // const timeVal = time.format('HHmmss');
     const array = [];
     for (let i = 0; i < 20; i++) {
       array.push(this.decorateSymbol(s));
